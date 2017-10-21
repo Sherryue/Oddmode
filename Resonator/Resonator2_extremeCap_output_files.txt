@@ -1,0 +1,118 @@
+! Summary of output files for parameterized project.
+!
+! Project: Resonator2_extremeCap.son
+! Folder:  /home/xueyue/Resonator
+! Date:    10/11/2017 17:55:30
+
+FTYP POFL 1
+HDATE 10/10/2017 20:37:37
+
+
+USER_FILE Even_eCap_W_gpn.s2p
+
+OUTPUT_FILE Even_eCap_W_gpn_param01.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 10.0
+Gap = 40.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param02.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 10.0
+Gap = 60.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param03.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 10.0
+Gap = 80.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param04.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 20.0
+Gap = 40.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param05.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 20.0
+Gap = 60.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param06.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 20.0
+Gap = 80.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param07.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 30.0
+Gap = 40.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param08.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 30.0
+Gap = 60.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param09.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 30.0
+Gap = 80.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param10.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 40.0
+Gap = 40.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param11.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 40.0
+Gap = 60.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param12.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 40.0
+Gap = 80.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param13.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 50.0
+Gap = 40.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param14.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 50.0
+Gap = 60.0
+END PARAMS
+
+OUTPUT_FILE Even_eCap_W_gpn_param15.s2p
+PARAMS
+Pwid1 = 2000.0
+Width = 50.0
+Gap = 80.0
+END PARAMS
+
+END USER_FILE

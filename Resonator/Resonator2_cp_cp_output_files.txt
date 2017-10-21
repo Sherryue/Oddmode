@@ -1,0 +1,83 @@
+! Summary of output files for parameterized project.
+!
+! Project: Resonator2_cp_cp.son
+! Folder:  /home/xueyue/Resonator
+! Date:    10/06/2017 09:20:32
+
+FTYP POFL 1
+HDATE 10/05/2017 21:11:40
+
+
+USER_FILE Even_bx3000y7000_p2000_gp.s2p
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param01.s2p
+PARAMS
+gap = 6.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param02.s2p
+PARAMS
+gap = 16.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param03.s2p
+PARAMS
+gap = 26.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param04.s2p
+PARAMS
+gap = 36.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param05.s2p
+PARAMS
+gap = 46.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param06.s2p
+PARAMS
+gap = 56.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param07.s2p
+PARAMS
+gap = 66.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param08.s2p
+PARAMS
+gap = 76.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param09.s2p
+PARAMS
+gap = 86.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+OUTPUT_FILE Even_bx3000y7000_p2000_gp_param10.s2p
+PARAMS
+gap = 96.0
+Length = 400.0
+Pwid1 = 2000.0
+END PARAMS
+
+END USER_FILE

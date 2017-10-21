@@ -1,0 +1,37 @@
+! Summary of output files for parameterized project.
+!
+! Project: Qubit_Xmon2.son
+! Folder:  /home/xueyue/Qubit
+! Date:    10/18/2017 16:48:16
+
+FTYP POFL 1
+HDATE 10/18/2017 14:47:42
+
+
+USER_FILE Xodd_W50_gp.s2p
+
+OUTPUT_FILE Xodd_W50_gp_param1.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 50.0
+END PARAMS
+
+OUTPUT_FILE Xodd_W50_gp_param2.s2p
+PARAMS
+Lj = 11.0
+Gap = 16.0
+Pwid = 2000.0
+Width = 50.0
+END PARAMS
+
+OUTPUT_FILE Xodd_W50_gp_param3.s2p
+PARAMS
+Lj = 11.0
+Gap = 26.0
+Pwid = 2000.0
+Width = 50.0
+END PARAMS
+
+END USER_FILE

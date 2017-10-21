@@ -1,0 +1,16 @@
+! Sonnet Data File
+! From: emgraph Version : 16.52
+! From Emgraph Data: Waveguide3
+! Data File Written: 09/29/2017 11:26:23
+!< HDATE 09/29/2017 11:25:27
+!< MDATE 09/29/2017 11:25:27
+!< PARAMS
+!< Pwid = 45.0
+!< gap = 9.0
+!< hWid = 15.0
+!< END PARAMS
+# GHZ S MA R 50.0 !  non standard terminations in data
+! TERM 52.50000 0.000000 72.00000 0.000000
+6.00000000 0.943287 -113.0 0.267952 -6.745 0.267952 -6.745 0.963014 -80.84
+!< P1 F=6.0 Eeff=(6.44466293 -2.9721e-5) Z0=(52.1433483 1.20215e-4) R=0.0 C=0.0 
+!< P2 F=6.0 Eeff=(6.38842191 -1.4608e-4) Z0=(72.7814159 -2.212e-3) R=0.0 C=0.0 

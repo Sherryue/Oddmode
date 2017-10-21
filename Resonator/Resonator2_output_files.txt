@@ -1,0 +1,37 @@
+! Summary of output files for parameterized project.
+!
+! Project: Resonator2.son
+! Folder:  /home/xueyue/Resonator
+! Date:    10/09/2017 23:05:25
+
+FTYP POFL 1
+HDATE 10/09/2017 14:49:56
+
+
+USER_FILE Odd_Cap_W40_gp.s2p
+
+OUTPUT_FILE Odd_Cap_W40_gp_param1.s2p
+PARAMS
+gap = 6.0
+Length = 400.0
+Pwid1 = 2000.0
+Width = 40.0
+END PARAMS
+
+OUTPUT_FILE Odd_Cap_W40_gp_param2.s2p
+PARAMS
+gap = 16.0
+Length = 400.0
+Pwid1 = 2000.0
+Width = 40.0
+END PARAMS
+
+OUTPUT_FILE Odd_Cap_W40_gp_param3.s2p
+PARAMS
+gap = 26.0
+Length = 400.0
+Pwid1 = 2000.0
+Width = 40.0
+END PARAMS
+
+END USER_FILE

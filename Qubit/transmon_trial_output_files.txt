@@ -1,0 +1,133 @@
+! Summary of output files for parameterized project.
+!
+! Project: transmon_trial.son
+! Folder:  /home/xueyue/Qubit
+! Date:    10/20/2017 09:13:09
+
+FTYP POFL 1
+HDATE 10/19/2017 20:03:37
+
+
+USER_FILE Teven_W_gp.s2p
+
+OUTPUT_FILE Teven_W_gp_param01.s2p
+PARAMS
+Lj = 15.24
+Gap = 6.0
+Width = 10.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param02.s2p
+PARAMS
+Lj = 15.24
+Gap = 6.0
+Width = 20.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param03.s2p
+PARAMS
+Lj = 15.24
+Gap = 6.0
+Width = 30.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param04.s2p
+PARAMS
+Lj = 15.24
+Gap = 6.0
+Width = 40.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param05.s2p
+PARAMS
+Lj = 15.24
+Gap = 6.0
+Width = 50.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param06.s2p
+PARAMS
+Lj = 15.24
+Gap = 16.0
+Width = 10.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param07.s2p
+PARAMS
+Lj = 15.24
+Gap = 16.0
+Width = 20.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param08.s2p
+PARAMS
+Lj = 15.24
+Gap = 16.0
+Width = 30.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param09.s2p
+PARAMS
+Lj = 15.24
+Gap = 16.0
+Width = 40.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param10.s2p
+PARAMS
+Lj = 15.24
+Gap = 16.0
+Width = 50.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param11.s2p
+PARAMS
+Lj = 15.24
+Gap = 26.0
+Width = 10.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param12.s2p
+PARAMS
+Lj = 15.24
+Gap = 26.0
+Width = 20.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param13.s2p
+PARAMS
+Lj = 15.24
+Gap = 26.0
+Width = 30.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param14.s2p
+PARAMS
+Lj = 15.24
+Gap = 26.0
+Width = 40.0
+Pwidth = 2000.0
+END PARAMS
+
+OUTPUT_FILE Teven_W_gp_param15.s2p
+PARAMS
+Lj = 15.24
+Gap = 26.0
+Width = 50.0
+Pwidth = 2000.0
+END PARAMS
+
+END USER_FILE
