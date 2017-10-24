@@ -11,9 +11,9 @@ clear; clc;
 % % S22 = zeros(Leng, Num);
 % gap = str2num(Names(:,20:21));  %need to be changed with different file names
 
-gap = [6].';
+gap = [256].';
 Num = length(gap);
-Pref = 'Xeven_W10_gp';
+Pref = 'Xodd_D';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
@@ -58,9 +58,9 @@ for ki = 1:Num
     ylabel('Mag(S21) (dB)')
 end
 
-% figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'o--');
-figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
-% figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
+% figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
+% figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
+% figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
 
 % figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
 % figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');

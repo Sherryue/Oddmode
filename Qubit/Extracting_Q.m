@@ -11,9 +11,9 @@ clear; clc;
 % % S22 = zeros(Leng, Num);
 % gap = str2num(Names(:,20:21));  %need to be changed with different file names
 
-gap = [6:10:26].';
+gap = [6].';
 Num = length(gap);
-Pref = 'Teven_W50_gp';
+Pref = 'Xeven_W10_gp';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
@@ -51,20 +51,20 @@ for ki = 1:Num
     Ci_para(ki,5:6) = ci(3,:);
     
     MAGS21_fit = sqrt(x1(5).*(x1(1).^2+4.*((xdata-x1(2))-x1(4)).^2)./((x1(1)+x1(3)).^2+4.*((xdata-x1(2))).^2));
-%     figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
-%     plot(xdata, 10.*log10(MAGS21_fit));
-%     hold on; plot(xdata, 10.*log10(ydata1), '--');
-%     xlabel('Frequency (GHz)')
-%     ylabel('Mag(S21) (dB)')
+    figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
+    plot(xdata, 10.*log10(MAGS21_fit));
+    hold on; plot(xdata, 10.*log10(ydata1), '--');
+    xlabel('Frequency (GHz)')
+    ylabel('Mag(S21) (dB)')
 end
 
 % figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
 % figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
 % figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
 
-figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
-figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
-figure(3);hold on; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
+% figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
+% figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
+% figure(3);hold on; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
 
 % figure (1);xlabel('Gap (\mum)');ylabel('Resonance frequency (GHz)');
 % figure (2);xlabel('Gap (\mum)');ylabel('Intrinsic loss rate (GHz)');
