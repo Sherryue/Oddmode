@@ -1,0 +1,43 @@
+! Summary of output files for parameterized project.
+!
+! Project: Qubit_Xmon2_brg.son
+! Folder:  /home/xueyue/Bridge
+! Date:    10/25/2017 20:12:53
+
+FTYP POFL 1
+HDATE 10/25/2017 15:44:55
+
+
+USER_FILE Xodd_D350_W.s2p
+
+OUTPUT_FILE Xodd_D350_W_param1.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 20.0
+Dis1 = 350.0
+END PARAMS
+
+OUTPUT_FILE Xodd_D350_W_param2.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 40.0
+Dis1 = 350.0
+END PARAMS
+
+OUTPUT_FILE Xodd_D350_W_param3.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 50.0
+Dis1 = 350.0
+END PARAMS
+
+END USER_FILE

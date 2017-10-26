@@ -11,9 +11,9 @@ clear; clc;
 % % S22 = zeros(Leng, Num);
 % gap = str2num(Names(:,20:21));  %need to be changed with different file names
 
-gap = [50,124,150:100:350].';
+gap = [8, 20,40,60].'; %50,124,150:100:350,550:100:850
 Num = length(gap);
-Pref = 'Xodd_W8_D';
+Pref = 'Xeven_D350_W';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
@@ -68,13 +68,13 @@ for ki = 1:Num
 %     ylabel('Mag(S21) (dB)')
 end
 
-figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
-figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
-figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
+% figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'o--');
+% figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
+% figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
 
-% figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
-% figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
-% figure(3);hold on; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
+figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
+figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
+figure(3);hold on; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
 
 % figure (1);xlabel('Gap (\mum)');ylabel('Resonance frequency (GHz)');
 % figure (2);xlabel('Gap (\mum)');ylabel('Intrinsic loss rate (GHz)');
