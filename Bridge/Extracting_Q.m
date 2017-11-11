@@ -11,14 +11,15 @@ clear; clc;
 % % S22 = zeros(Leng, Num);
 % gap = str2num(Names(:,20:21));  %need to be changed with different file names
 
-gap = [8, 20,40,60].'; %50,124,150:100:350,550:100:850
+gap = [8].'; %50,124,150:100:350,550:100:850
 Num = length(gap);
-Pref = 'Xeven_D350_W';
+Pref = 'Xodd_D350_W';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
 fit_para = zeros(Num, 5);  %kp_i, f_r, kp_e, fano, offset
 Ci_para = zeros(Num, 6);   %confidence interval for the above three
+Base_trans = zeros(Num,1);
 
 %% fitting Mag
 for ki = 1:Num
@@ -31,6 +32,7 @@ for ki = 1:Num
 %     S22(:,ki) = (permute(S.Parameters(2,2,:),[3,2,1]));
     xdata = abs(S.Frequencies)./1e9;
     ydata1 = abs(permute(S.Parameters(2,1,:),[3,2,1]));
+    Base_trans(ki) = ydata1(1);
     t_est = ydata1(1);
 %     xdata = xdata(200:800);
 %     ydata1 = ydata1(200:800);
@@ -48,6 +50,11 @@ for ki = 1:Num
     % Imag(t)
     x0 = [3.68e-5, f_min, 1.27e-4, real(t_est), imag(t_est)]; 
     
+%     z0 = 34.7;
+%     fun1 = @(x, xdata) (1./(1+(1./xdata./x(4)).^2)).*((x(1)-z0.*(xdata-x(2))./xdata./x(4)).^2+(-z0.*x(1)./(xdata.*x(4))+2.*(xdata-x(2))).^2)./...
+%         ((x(1)+x(3)-z0.*(xdata-x(2))./xdata./x(4)).^2+(-z0.*x(1)./xdata./x(4)+2.*(xdata-x(2))).^2);
+%     x0 = [3.68e-5, f_min, 2e-4,1e9];%1./(2*pi*8e9*sqrt(1./abs(t_est).^2-1))
+    
     [x1,resnorm,residual,exitflag,output,lambda,J] = lsqcurvefit(fun1, x0, xdata, ydata1.^2);
     
     fit_para(ki,:) = abs(x1);
@@ -61,6 +68,8 @@ for ki = 1:Num
 %     MAGS21_fit = sqrt(x1(5).*(x1(1).^2+4.*((xdata-x1(2))-x1(4)).^2)./((x1(1)+x1(3)).^2+4.*((xdata-x1(2))).^2));
     MAGS21_fit = sqrt(((x1(4).*(x1(1)+x1(3))-2.*x1(5).*(xdata-x1(2))-x1(3)).^2+(2.*x1(4).*(xdata-x1(2))+x1(5).*(x1(1)+x1(3))).^2)./...
         ((x1(1)+x1(3)).^2+4.*(xdata-x1(2)).^2));
+%     MAGS21_fit = sqrt((1./(1+(1./xdata./x1(4)).^2)).*((x1(1)-z0.*(xdata-x1(2))./xdata./x1(4)).^2+(-z0.*x1(1)./(xdata.*x1(4))+2.*(xdata-x1(2))).^2)./...
+%         ((x1(1)+x1(3)-z0.*(xdata-x1(2))./xdata./x1(4)).^2+(-z0.*x1(1)./xdata./x1(4)+2.*(xdata-x1(2))).^2));
 %     figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
 %     plot(xdata, 10.*log10(MAGS21_fit));
 %     hold on; plot(xdata, 10.*log10(ydata1), '--');
@@ -68,13 +77,16 @@ for ki = 1:Num
 %     ylabel('Mag(S21) (dB)')
 end
 
+figure; plot(gap,20.*log10(Base_trans),'o');
+
 % figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'o--');
 % figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
 % figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
 
-figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
-figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');
-figure(3);hold on; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d-');
+% gap = 350;
+% figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d');
+% figure(2);hold on; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d');
+% figure(3);hold on; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'d');
 
 % figure (1);xlabel('Gap (\mum)');ylabel('Resonance frequency (GHz)');
 % figure (2);xlabel('Gap (\mum)');ylabel('Intrinsic loss rate (GHz)');
