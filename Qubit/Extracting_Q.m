@@ -11,9 +11,9 @@ clear; clc;
 % % S22 = zeros(Leng, Num);
 % gap = str2num(Names(:,20:21));  %need to be changed with different file names
 
-gap = [6].';
+gap = [6:10:26].';
 Num = length(gap);
-Pref = 'Xeven_W10_gp';
+Pref = 'tOdd_W10_gp';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
@@ -51,12 +51,14 @@ for ki = 1:Num
     Ci_para(ki,5:6) = ci(3,:);
     
     MAGS21_fit = sqrt(x1(5).*(x1(1).^2+4.*((xdata-x1(2))-x1(4)).^2)./((x1(1)+x1(3)).^2+4.*((xdata-x1(2))).^2));
-    figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
-    plot(xdata, 10.*log10(MAGS21_fit));
-    hold on; plot(xdata, 10.*log10(ydata1), '--');
-    xlabel('Frequency (GHz)')
-    ylabel('Mag(S21) (dB)')
+%     figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
+%     plot(xdata, 10.*log10(MAGS21_fit));
+%     hold on; plot(xdata, 10.*log10(ydata1), '--');
+%     xlabel('Frequency (GHz)')
+%     ylabel('Mag(S21) (dB)')
 end
+
+save(Pref, 'fit_para');
 
 % figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d-');
 % figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'d-');

@@ -1,0 +1,53 @@
+! Summary of output files for parameterized project.
+!
+! Project: Qubit_Xmon2_brg_para2.son
+! Folder:  /home/xueyue/Qubit_Xmon2_brg_para2
+! Date:    11/12/2017 19:07:08
+
+FTYP POFL 1
+HDATE 11/12/2017 17:14:45
+
+
+USER_FILE Xodd05u_W8_D.s2p
+
+OUTPUT_FILE Xodd05u_W8_D_param1.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 8.0
+Dis1 = 50.0
+END PARAMS
+
+OUTPUT_FILE Xodd05u_W8_D_param2.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 8.0
+Dis1 = 150.0
+END PARAMS
+
+OUTPUT_FILE Xodd05u_W8_D_param3.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 8.0
+Dis1 = 250.0
+END PARAMS
+
+OUTPUT_FILE Xodd05u_W8_D_param4.s2p
+PARAMS
+Lj = 11.0
+Gap = 6.0
+Pwid = 2000.0
+Width = 10.0
+Bwid = 8.0
+Dis1 = 350.0
+END PARAMS
+
+END USER_FILE

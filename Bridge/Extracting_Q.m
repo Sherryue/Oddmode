@@ -11,9 +11,10 @@ clear; clc;
 % % S22 = zeros(Leng, Num);
 % gap = str2num(Names(:,20:21));  %need to be changed with different file names
 
-gap = [8].'; %50,124,150:100:350,550:100:850
+gap = [400].'; %50,124,150:100:350,550:100:850 %even 50,150:100:550,750, 850
+% Toddn 600, 1000:200:1600,2000:200:2200
 Num = length(gap);
-Pref = 'Xodd_D350_W';
+Pref = 'Teven_W8_D';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
@@ -31,7 +32,7 @@ for ki = 1:Num
 %     S21(:,ki) = (permute(S.Parameters(2,1,:),[3,2,1]));
 %     S22(:,ki) = (permute(S.Parameters(2,2,:),[3,2,1]));
     xdata = abs(S.Frequencies)./1e9;
-    ydata1 = abs(permute(S.Parameters(2,1,:),[3,2,1]));
+    ydata1 = abs(permute(S.Parameters(1,1,:),[3,2,1]));
     Base_trans(ki) = ydata1(1);
     t_est = ydata1(1);
 %     xdata = xdata(200:800);
@@ -48,7 +49,7 @@ for ki = 1:Num
         ((x(1)+x(3)).^2+4.*(xdata-x(2)).^2);
     % x(1) kappa_i/2pi, x(2) f_0, x(3) kappa_e/2pi, x(4) Real(t), x(5)
     % Imag(t)
-    x0 = [3.68e-5, f_min, 1.27e-4, real(t_est), imag(t_est)]; 
+    x0 = [3.68e-5, f_min, 1e-5, real(t_est), imag(t_est)]; % ke 1.27e-4
     
 %     z0 = 34.7;
 %     fun1 = @(x, xdata) (1./(1+(1./xdata./x(4)).^2)).*((x(1)-z0.*(xdata-x(2))./xdata./x(4)).^2+(-z0.*x(1)./(xdata.*x(4))+2.*(xdata-x(2))).^2)./...
@@ -77,11 +78,15 @@ for ki = 1:Num
 %     ylabel('Mag(S21) (dB)')
 end
 
-figure; plot(gap,20.*log10(Base_trans),'o');
+% DbBrg_data = fit_para;
+% load('Teven_W8_D')
+% save('Todd_W8_D', 'fit_para', 'gap');
+
+% figure; plot(gap,20.*log10(Base_trans),'o');
 
 % figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'o--');
-% figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
-% figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
+figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
+figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
 
 % gap = 350;
 % figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d');
