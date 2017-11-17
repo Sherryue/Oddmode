@@ -15,7 +15,7 @@ gap = [2].'; %50,124,150:100:350,550:100:850 %even 50,150:100:550,750, 850
 % Toddn 600, 1000:200:1600,2000:200:2200
 % Xeven05u 50:100:150, 350:100:550, 750, 850
 Num = length(gap);
-Pref = 'Teven_W8_D800_Db';
+Pref = 'Todd_W8_D800_Db';
 Sufx = num2str(gap);
 Sufx(1,1) = '0';
 Names = [repmat(Pref,Num,1),Sufx];
@@ -25,15 +25,16 @@ Base_trans = zeros(Num,1);
 
 %% fitting Mag
 for ki = 1:Num
-    S = sparameters([Pref,num2str(gap(ki)),'.s2p']);
+%     S = sparameters([Pref,num2str(gap(ki)),'.s2p']);
 %     S = sparameters(['test2','.s2p']);
     % fitting Magnitude
 %     S11(:,ki) = (permute(S.Parameters(1,1,:),[3,2,1]));
 %     S12(:,ki) = (permute(S.Parameters(1,2,:),[3,2,1]));
 %     S21(:,ki) = (permute(S.Parameters(2,1,:),[3,2,1]));
 %     S22(:,ki) = (permute(S.Parameters(2,2,:),[3,2,1]));
-    xdata = abs(S.Frequencies)./1e9;
-    ydata1 = abs(permute(S.Parameters(1,1,:),[3,2,1]));
+    load('Todd_trace_noBrg');
+    xdata = FrequencyGHz;
+    ydata1 = MAGS21;
     Base_trans(ki) = ydata1(1);
     t_est = ydata1(1);
 %     xdata = xdata(200:800);
@@ -72,22 +73,22 @@ for ki = 1:Num
         ((x1(1)+x1(3)).^2+4.*(xdata-x1(2)).^2));
 %     MAGS21_fit = sqrt((1./(1+(1./xdata./x1(4)).^2)).*((x1(1)-z0.*(xdata-x1(2))./xdata./x1(4)).^2+(-z0.*x1(1)./(xdata.*x1(4))+2.*(xdata-x1(2))).^2)./...
 %         ((x1(1)+x1(3)-z0.*(xdata-x1(2))./xdata./x1(4)).^2+(-z0.*x1(1)./xdata./x1(4)+2.*(xdata-x1(2))).^2));
-%     figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
-%     plot(xdata, 10.*log10(MAGS21_fit));
-%     hold on; plot(xdata, 10.*log10(ydata1), '--');
-%     xlabel('Frequency (GHz)')
-%     ylabel('Mag(S21) (dB)')
+    figure; %plot(xdata, 10.*log10(permute(S.Parameters(1,1,:),[3,2,1])))
+    plot(xdata, 10.*log10(MAGS21_fit));
+    hold on; plot(xdata, 10.*log10(ydata1), '--');
+    xlabel('Frequency (GHz)')
+    ylabel('Mag(S21) (dB)')
 end
 
 % DbBrg_data = fit_para;
-% load('Todd_W8_D')
-% save('Todd_W8_D', 'fit_para', 'gap','DbBrg_data');
+% load('Teven_W8_D')
+% save('Xodd05u_W8_D', 'fit_para', 'gap');
 
 % figure; plot(gap,20.*log10(Base_trans),'o');
 
 % figure; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'o--');
-figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
-figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
+% figure; errorbar(gap, fit_para(:,1), fit_para(:,1)-Ci_para(:,1),fit_para(:,1)-Ci_para(:,2),'o--');
+% figure; errorbar(gap, fit_para(:,3), fit_para(:,3)-Ci_para(:,5),fit_para(:,3)-Ci_para(:,6),'o--');
 
 % gap = 350;
 % figure (1);hold on; errorbar(gap, fit_para(:,2), fit_para(:,2)-Ci_para(:,3),fit_para(:,2)-Ci_para(:,4),'d');

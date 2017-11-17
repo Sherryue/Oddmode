@@ -1,0 +1,49 @@
+! Summary of output files for parameterized project.
+!
+! Project: 171114transmon_trace_brg.son
+! Folder:  /home/xueyue/171114transmon_trace_brg
+! Date:    11/14/2017 19:58:18
+
+FTYP POFL 1
+HDATE 11/14/2017 18:03:22
+
+
+USER_FILE Todd_trace_g14_Dn.s2p
+
+OUTPUT_FILE Todd_trace_g14_Dn_param1.s2p
+PARAMS
+Lj = 15.24
+Gap = 14.0
+Width = 10.0
+Pwidth = 2000.0
+Dist = 600.0
+END PARAMS
+
+OUTPUT_FILE Todd_trace_g14_Dn_param2.s2p
+PARAMS
+Lj = 15.24
+Gap = 14.0
+Width = 10.0
+Pwidth = 2000.0
+Dist = 1000.0
+END PARAMS
+
+OUTPUT_FILE Todd_trace_g14_Dn_param3.s2p
+PARAMS
+Lj = 15.24
+Gap = 14.0
+Width = 10.0
+Pwidth = 2000.0
+Dist = 1400.0
+END PARAMS
+
+OUTPUT_FILE Todd_trace_g14_Dn_param4.s2p
+PARAMS
+Lj = 15.24
+Gap = 14.0
+Width = 10.0
+Pwidth = 2000.0
+Dist = 1800.0
+END PARAMS
+
+END USER_FILE
