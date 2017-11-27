@@ -1,0 +1,94 @@
+! Summary of output files for parameterized project.
+!
+! Project: 171117_Xmon_fullysym.son
+! Folder:  /home/xueyue/BoundaryCondi
+! Date:    11/27/2017 00:27:56
+
+FTYP POFL 1
+HDATE 11/26/2017 21:47:59
+
+
+USER_FILE Xmon_fullysym_VariLf.s2p
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param1.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.62
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param2.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.64
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param3.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.66
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param4.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.68
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param5.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.7
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param6.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.72
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param7.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.74
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param8.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.76
+END PARAMS
+
+OUTPUT_FILE Xmon_fullysym_VariLf_param9.s2p
+PARAMS
+Lj = 11.0
+Gap = 1.0
+Pwid = 2000.0
+Width = 10.0
+Lj1 = 10.78
+END PARAMS
+
+END USER_FILE
