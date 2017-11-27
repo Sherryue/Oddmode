@@ -1,0 +1,8 @@
+clear; clc;
+
+S = sparameters(['170708_mm_squiggleX_Res5G_12','.s2p']);
+
+xdata = abs(S.Frequencies)./1e9;
+ydata1 = abs(permute(S.Parameters(2,1,:),[3,2,1]));
+
+figure; plot(xdata,)
